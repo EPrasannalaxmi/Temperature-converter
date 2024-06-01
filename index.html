@@ -4,16 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <title>Temperature Converter</title>
 </head>
-<body>
-  <div class="converter-container">
-    <h1>Temperature Converter</h1>
-    <label for="celsius">Enter temperature in Celsius:</label>
-    <input type="number" id="celsius" placeholder="Enter Celsius" oninput="convertTemperature()">
-    <p>Temperature in Fahrenheit: <span id="result">--</span> °F</p>
-  </div>
 
-  <script src="script.js"></script>
+<body>
+  <div class="converter">
+    <h3>Temperature Converter</h3>
+    <label for="From">From:</label>
+    <select id="From">
+      <option value="C">Celsius</option>
+      <option value="F">Fahrenheit</option>
+      <option value="K">Kelvin</option>
+    </select>
+    <label for="TO">To:</label>
+    <select id="To">
+      <option value="C">Celsius</option>
+      <option value="F">Fahrenheit</option>
+      <option value="K">Kelvin</option>
+    </select>
+    <label for="val">Temperature</label>
+    <input type="number" id="input" placeholder="Enter the temperature">
+    <button id="button" onclick="convertTemperature()">Convert</button>
+    <label for="result">Result:</label>
+    <input readonly type="text" id="output" placeholder="Result">
+  </div>
+  
 </body>
 </html>
